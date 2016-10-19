@@ -1,0 +1,60 @@
+var slidemd;
+var slideref;
+var laststep = 0;
+
+function SlideController($scope, $route, $routeParams, $location) {	
+  var curslide = undefined;
+
+  if (!slidemd || slideref != $routeParams.slideref) {
+    $.get('md/'+$routeParams.slideref+'.md', function(data){
+      slidemd = data.substring(2).split(/\n#\s/).map(function(a){return "# "+a;});
+      setSlide($routeParams.slidenum || 0);
+    });
+  }
+
+  $(document).keydown(function(ev){
+    if (ev.keyCode == 39)
+      increment();
+    else if (ev.keyCode == 37)
+      decrement();
+  })
+
+  function setSlide(slideidx) {
+    // if (curslide !== undefined && (curslide === slideidx)) return;
+
+    curslide = slideidx;
+
+    curslide %= slidemd.length;
+    curslide += slidemd.length;
+    curslide %= slidemd.length;
+
+    $scope.pane = slidemd[curslide];
+
+    $route.updateParams({slidenum: curslide});
+
+    if(!$scope.$$phase) {
+      $scope.$apply();
+      prettyPrint();
+    } else {
+      $scope.$$postDigest(function(){prettyPrint();});
+    }
+
+  }
+  function increment() {
+    if (!Math.floor((new Date().getTime()-laststep)/100)) return;
+    setSlide(curslide+1);
+    laststep = new Date().getTime();
+  }
+  function decrement() {
+    if (!Math.floor((new Date().getTime()-laststep)/100)) return;
+    setSlide(curslide-1);
+    laststep = new Date().getTime();
+  }
+  function scream() {
+    console.log("ASFIOAHSDOIFHASOIDFHAISODFH");
+  }
+  $scope.scream = scream;
+  $scope.setSlide = setSlide;
+  $scope.increment = increment;
+  $scope.decrement = decrement;
+}

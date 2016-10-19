@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SlideDown</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link type="text/css" rel="stylesheet" href="slider.css" />
+</head>
+<body>
+  <div id="pane"> 
+   <h1>Hello World!</h1>
+   <a href="slider2.html">slider2.html</a>
+  </div>
+</body>
+<script type="text/javascript">
+  var query = (function(){
+  var queryparts = location.search.substring(1).split('&');
+  var ret = {};
+  console.log(queryparts);
+  for (var tok in queryparts) {
+   var keyval = tok.split('=');
+   ret[keyval[0]] = keyval[1];
+ }
+ return ret;
+})();
+
+console.log('aaa:',query);
+</script>
+</html>

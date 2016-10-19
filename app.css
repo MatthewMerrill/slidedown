@@ -1,0 +1,79 @@
+.avatar {
+  height: 100%;
+}
+
+.avatar img {
+  border-radius: 50%;
+  height: 100%;
+  padding: 5px 0;
+}
+/*
+md-content {
+  background-image: url("tile.png");
+  height: 100%;
+  padding: 25px;
+}*/
+/*
+md-content > div {
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+md-tab-content {
+  margin: 10px;
+}
+*/
+
+md-content {
+  border: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 64px;
+  background-color: black;
+}
+
+#container
+{
+  background-image: url("tile.png");
+
+  width: 100vw; 
+  height: 56.25vw; /* height:width ratio = 9/16 = .5625  
+  /*background: pink;*/
+  max-height: 100vh;
+  max-width: 177.78vh; /* 16/9 = 1.778 */
+  margin: auto;
+  position: absolute;
+  top:0;bottom:0; /* vertical center */
+  left:0;right:0; /* horizontal center */
+}
+
+#pane {
+  font-size: 3vw;
+}
+
+#pane div {
+  padding: 0 3vw;
+  position: relative;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+}
+
+/*#pane code {
+  font-size: 1.75vw;
+  padding: 5px;
+  background: #abc;
+  border: solid .2vw #9ab;
+  border-radius: .4vw;
+}*/
