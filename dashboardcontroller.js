@@ -3,7 +3,7 @@ function DashboardController($scope, $http) {
 
   $http({
     method: 'GET',
-    url: 'md/mdlist.json'
+    url: '/slidedown/md/mdlist.json'
   }).then(function(res){
     $scope.mdlist = res.data;
   })
