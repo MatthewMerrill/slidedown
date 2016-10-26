@@ -1,0 +1,31 @@
+html, body {
+  width: 90vw;
+  height: calc(100vh - 10vw);
+  font-size: 3vw;
+
+  overflow: hidden;;
+  margin: 0;
+}
+
+body {
+  padding: 5vw;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding-left: 5%;
+  margin: 0;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+}

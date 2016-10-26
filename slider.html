@@ -5,25 +5,23 @@
   <title>SlideDown</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link type="text/css" rel="stylesheet" href="slider.css" />
+  <link type="text/css" rel="stylesheet" href="slideframe.css" >
+  <link type="text/css" rel="stylesheet" href="bower_components/color-themes-for-google-code-prettify/themes/tomorrow-night-eighties.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script>
+    $('html').bind("DOMSubtreeModified", function() {
+      prettyPrint();
+    });
+    // var realWindow = window.parent || window;//.....  //Attach event listeners 
+    // realWindow.addEventListener("keydown", key.downHandler.bind(key), false  );
+    // realWindow.addEventListener("keyup", key.upHandler.bind(key), false  );
+    $(document).keydown(top.slidekeypressed);
+  </script>
 </head>
 <body>
-  <div id="pane"> 
-   <h1>Hello World!</h1>
-   <a href="slider2.html">slider2.html</a>
-  </div>
 </body>
 <script type="text/javascript">
-  var query = (function(){
-  var queryparts = location.search.substring(1).split('&');
-  var ret = {};
-  console.log(queryparts);
-  for (var tok in queryparts) {
-   var keyval = tok.split('=');
-   ret[keyval[0]] = keyval[1];
- }
- return ret;
-})();
-
-console.log('aaa:',query);
+console.log('hallo');
 </script>
 </html>

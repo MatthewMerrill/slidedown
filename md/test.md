@@ -1,11 +1,11 @@
 # ICPC
-<span style="float:right; margin-right: 5vw;" markdown="1">
-  <img src="https://scontent-sjc2-1.xx.fbcdn.net/t39.1997-6/p128x128/851583_499671233448713_2082326075_n.png" style="height:5em">
+<span style="float:right;position:fixed;bottom:10vh;right:5vw;">
+  <img src="https://scontent-sjc2-1.xx.fbcdn.net/t39.1997-6/p128x128/851583_499671233448713_2082326075_n.png" style="height:15vw">
 </span>
 
- - What it is?
- - How even prepare?
+ - Language Tricks
  - Best practices (in a _totally_ objective manner)
+ - Example
 
 # What it is?
  - Read in, Write out.

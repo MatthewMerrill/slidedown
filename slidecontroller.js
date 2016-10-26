@@ -12,12 +12,14 @@ function SlideController($scope, $route, $routeParams, $location) {
     });
   }
 
-  $(document).keydown(function(ev){
+  window.slidekeypressed = function(ev){
     if (ev.keyCode == 39)
       increment();
     else if (ev.keyCode == 37)
       decrement();
-  })
+  }
+
+  $(document).keydown(window.slidekeypressed);
 
   function setSlide(slideidx) {
     // if (curslide !== undefined && (curslide === slideidx)) return;
@@ -32,12 +34,16 @@ function SlideController($scope, $route, $routeParams, $location) {
 
     $route.updateParams({slidenum: curslide});
 
+
     if(!$scope.$$phase) {
       $scope.$apply();
       prettyPrint();
     } else {
       $scope.$$postDigest(function(){prettyPrint();});
     }
+
+    var converter = new showdown.Converter({extensions: ['prettify']});
+    $("#iframe").contents().find('body').html(converter.makeHtml($scope.pane)); 
 
   }
   function increment() {

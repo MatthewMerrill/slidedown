@@ -26,7 +26,8 @@ function RRController($scope, $mdDialog, $location, $routeParams) {
   }
 
   $scope.fullscreen = function(ev) {
-    var frame = document.getElementById("container");
+    var frame = document.getElementById("mdcontent");
+    $(frame).addClass('fullscreen');
     if (frame.requestFullscreen) {
       frame.requestFullscreen();
     } else if (frame.webkitRequestFullscreen) {
