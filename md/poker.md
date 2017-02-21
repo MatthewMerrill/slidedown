@@ -18,7 +18,7 @@ Four players hold 5 cards each. Given the sum of each player's card, how many wa
 51 57 63 69           | 1
 
 {
-  {{10,10,10,10,J},{J,J,J,Q,Q},{Q,Q,K,K},{K,A,A,A,A}}
+  { {10,10,10,10,J},{J,J,J,Q,Q},{Q,Q,K,K},{K,A,A,A,A} }
 }
 </pre>
 
