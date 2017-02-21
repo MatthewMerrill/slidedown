@@ -40,9 +40,9 @@
     - Hackathons
     - Algorithm Competitions
  - Career
-    - PowerSchool 2016-2017
+    - Intern, PowerSchool (2016-2017)
         - Left to work on HIPL
-    - Google Summer 2017
+    - Intern, Google (Summer 2017)
 
 <span style="float:right;position:fixed;bottom:5vh;right:5vw;">
   <img src="piplotprev.gif" style="height:15vw">
