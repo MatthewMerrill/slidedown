@@ -28,11 +28,11 @@ Four players hold 5 cards each. Given the sum of each player's card, how many wa
 51 57 63 69           | 5
 
 {
-  {{10,10,10,10,J},{J,Q,A,A,A},{J,J,Q,Q,Q},{K,K,K,K,A}},
-  {{10,10,10,10,J},{J,K,K,A,A},{J,J,Q,Q,Q},{Q,K,K,A,A}},
-  {{10,10,10,10,J},{Q,Q,K,A,A},{J,J,J,Q,K},{Q,K,K,A,A}},
-  {{10,10,10,10,J},{Q,K,K,K,A},{J,J,J,Q,K},{Q,Q,A,A,A}},
-  {{10,10,10,10,J},{Q,K,K,K,A},{J,J,Q,Q,Q},{J,K,A,A,A}},
+  { {10,10,10,10,J},{J,Q,A,A,A},{J,J,Q,Q,Q},{K,K,K,K,A} },
+  { {10,10,10,10,J},{J,K,K,A,A},{J,J,Q,Q,Q},{Q,K,K,A,A} },
+  { {10,10,10,10,J},{Q,Q,K,A,A},{J,J,J,Q,K},{Q,K,K,A,A} },
+  { {10,10,10,10,J},{Q,K,K,K,A},{J,J,J,Q,K},{Q,Q,A,A,A} },
+  { {10,10,10,10,J},{Q,K,K,K,A},{J,J,Q,Q,Q},{J,K,A,A,A} },
 }
 </pre>
 
