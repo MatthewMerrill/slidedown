@@ -13,9 +13,9 @@ function SlideController($scope, $route, $routeParams, $location) {
   }
 
   window.slidekeypressed = function(ev){
-    if (ev.keyCode == 39)
+    if (ev.keyCode == 39 || ev.keyCode == 34)
       increment();
-    else if (ev.keyCode == 37)
+    else if (ev.keyCode == 37 || ev.keyCode == 33)
       decrement();
   }
 

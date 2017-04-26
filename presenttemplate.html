@@ -1,19 +1,18 @@
-<div id="blackbars">
-
+<div id="blackbars"
+        md-swipe-right="alert('RIGHT')"
+        md-swipe-left="console.log('LEFT')">
 <div layout="row" layout-align="center center">
 	<div><br><br><br><br>
-<md-progress-circular class="" ng-disabled="resized" md-diameter="80"></md-progress-circular>
+    <md-progress-circular class="" ng-disabled="resized" md-diameter="80"></md-progress-circular>
 	</div>
 </div>
 
-</div>
-
-<div id="container" ng-show="resized" aspect>
+<div id="container" ng-show="resized" class="noselect" aspect>
   <div id="pane">
     <slide>
-    	<iframe id="iframe" src="slider.html" class="noselect"
-        md-swipe-right="decrement()"
-        md-swipe-left="increment()"></iframe>
+    	<iframe id="iframe" src="slider.html" class="noselect"></iframe>
     </slide>
   </div>
+</div>
+
 </div>
