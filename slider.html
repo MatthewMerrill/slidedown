@@ -3,10 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <title>SlideDown</title>
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+
   <link rel="icon" type="image/png" href="favicon.png">
   <link type="text/css" rel="stylesheet" href="slider.css" />
   <link type="text/css" rel="stylesheet" href="slideframe.css" >
   <link type="text/css" rel="stylesheet" href="bower_components/color-themes-for-google-code-prettify/themes/tomorrow-night-eighties.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:350|Source+Code+Pro" rel="stylesheet">
+
+  <style>
+  html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 350;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    background-color: black;
+    -webkit-text-size-adjust: 100%;
+  }
+  pre {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: 23vw;
+  }
+  pre * {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: 1.75vw;
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-image: url("tile.png");
+
+    overflow: hidden;
+    font-size: 2.5vw;
+  
+    box-sizing: border-box;
+    width: 100vw;
+    height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+    /*background: pink;*/
+    max-height: 100vh;
+    max-width: 177.78vh; /* 16/9 = 1.778 */
+    margin: auto;
+    padding: 5vw;
+    position: absolute;
+    top:0;bottom:0; /* vertical center */
+    left:0;right:0; /* horizontal center */
+  }
+  #pane {
+    padding: 4vw;
+    /*font-size: 3vw;*/
+  }
+  button {
+    background: rgb(96,125,139);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 3vw;
+    font-style: normal;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 2vw;
+    opacity: .5;
+    text-align: center;
+  }
+
+  ul, ol {
+    padding-left: 5vw;
+    margin: 0;
+  }
+  </style>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script>
@@ -17,9 +92,20 @@
     // realWindow.addEventListener("keydown", key.downHandler.bind(key), false  );
     // realWindow.addEventListener("keyup", key.upHandler.bind(key), false  );
     $(document).keydown(top.slidekeypressed);
+
+    // http://stackoverflow.com/a/596580/3188059
+    function increment() {
+      top.slidekeypressed({keyCode: 39});
+    }
+    function decrement() {
+      top.slidekeypressed({keyCode: 37});
+    }
   </script>
 </head>
 <body>
+  <div id="slide"></div>
+  <button onclick="increment();" style="position:fixed;right:0;bottom:0;">&gt;</button>
+  <button onclick="decrement();" style="position:fixed;left:0;bottom:0;">&lt;</button>
 </body>
 <script type="text/javascript">
 console.log('hallo');

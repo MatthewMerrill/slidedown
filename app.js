@@ -47,7 +47,7 @@ angular
     console.log(scope.pane);
     var converter = new showdown.Converter({extensions: ['prettify']});
     scope.$watch('pane', function () {
-      $("#iframe").contents().find('body').html(converter.makeHtml(scope.pane));
+      $("#iframe").contents().find('#slide').html(converter.makeHtml(scope.pane));
     });
   }
 
@@ -87,7 +87,7 @@ angular
 
     
     var converter = new showdown.Converter({extensions: ['prettify']});
-    $("#iframe").contents().find('body').html(converter.makeHtml(scope.pane)); 
+    $("#iframe").contents().find('#slide').html(converter.makeHtml(scope.pane)); 
 
       scope.resized = true; scope.$apply(); resize();
     }, 1000);

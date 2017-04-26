@@ -43,7 +43,7 @@ function SlideController($scope, $route, $routeParams, $location) {
     }
 
     var converter = new showdown.Converter({extensions: ['prettify']});
-    $("#iframe").contents().find('body').html(converter.makeHtml($scope.pane)); 
+    $("#iframe").contents().find('#slide').html(converter.makeHtml($scope.pane)); 
 
   }
   function increment() {
